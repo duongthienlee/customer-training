@@ -11,7 +11,7 @@ class DisplayCustomerTraining extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            trainings: [{}]
+            trainings: []
         };
     }
 
@@ -40,7 +40,7 @@ class DisplayCustomerTraining extends Component {
                         // assign date, duration, activity to "date", "duration", "activity" properties respectively
                         // convert response date to Js Date
                         let date = new Date(responseData.content[i].date);
-                        console.log("CUYSTOMSMDMS " + date);
+
                         let duration = responseData.content[i].duration;
 
                         let activity = responseData.content[i].activity;
@@ -136,6 +136,7 @@ class DisplayCustomerTraining extends Component {
 
     // -----------------------------------------Render section ---------------------------------------------------------
     render() {
+        console.log("TSESTS" + this.state.trainings[0]);
         return (
             <div
                 style={{
@@ -155,6 +156,7 @@ class DisplayCustomerTraining extends Component {
 
                 <ReactTable
                     data={this.state.trainings}
+                    noDataText="Oh there is no trainings!"
                     columns={[
                         {
                             Header: "Trainings",
