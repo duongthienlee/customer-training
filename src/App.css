@@ -26,21 +26,62 @@
   right: 0;
   top: 0;
   z-index: 1000;
-
 }
 
 .is-hidden {
   opacity: 0;
   -webkit-transform: translate(0, -10px);
-  -webkit-transition: -webkit-transform .2s, background .3s, color .3s, opacity 0.3s;
+  -webkit-transition: -webkit-transform 0.2s, background 0.3s, color 0.3s,
+    opacity 0.3s;
 }
 
 .is-visible {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  -webkit-transition: -webkit-transform .2s, background .3s, color .3s,opacity 0.3s;
+  -webkit-transition: -webkit-transform 0.2s, background 0.3s, color 0.3s,
+    opacity 0.3s;
+}
+.App-btn {
+  padding: 10px 16px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #014960;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
+.App-btn:hover {
+  background-color: #01303f;
+  color: #fff;
+}
+
+.App-btn:active {
+  color: #fff;
+  background-color: #01303f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.warning {
+  color: #fff;
+  background-color: #cc3300;
+}
+
+.warning:hover {
+  background-color: #b22f03;
+  color: #fff;
+}
+
+.warning:active {
+  color: #fff;
+  background-color: #b22f03;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 @keyframes App-logo-spin {
   from {
@@ -50,4 +91,3 @@
     transform: rotate(360deg);
   }
 }
-

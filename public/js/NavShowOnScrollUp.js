@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+$(document).ready(function() {
     /** ===========================================
      Hide / show the master navigation menu
      ============================================ */
@@ -7,23 +6,25 @@ $(document).ready(function(){
     // console.log('Window Height is: ' + $(window).height());
     // console.log('Document Height is: ' + $(document).height());
 
-    console.log('Window Height is: ' + $(window).height());
-    console.log('Document Height is: ' + $(document).height());
+    console.log("Window Height is: " + $(window).height());
+    console.log("Document Height is: " + $(document).height());
 
     var previousScroll = 0;
 
-    $(window).scroll(function(){
-
+    $(window).scroll(function() {
         var currentScroll = $(this).scrollTop();
 
         /*
           If the current scroll position is greater than 0 (the top) AND the current scroll position is less than the document height minus the window height (the bottom) run the navigation if/else statement.
         */
-        if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
+        if (
+            currentScroll > 0 &&
+            currentScroll < $(document).height() - $(window).height()
+        ) {
             /*
               If the current scroll is greater than the previous scroll (i.e we're scrolling down the page), hide the nav.
             */
-            if (currentScroll > previousScroll){
+            if (currentScroll > previousScroll) {
                 window.setTimeout(hideNav, 300);
                 /*
                   Else we are scrolling up (i.e the previous scroll is greater than the current scroll), so show the nav.
@@ -36,14 +37,16 @@ $(document).ready(function(){
             */
             previousScroll = currentScroll;
         }
-
     });
 
     function hideNav() {
-        $("[data-nav-status='toggle']").removeClass("is-visible").addClass("is-hidden");
+        $("[data-nav-status='toggle']")
+            .removeClass("is-visible")
+            .addClass("is-hidden");
     }
     function showNav() {
-        $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
+        $("[data-nav-status='toggle']")
+            .removeClass("is-hidden")
+            .addClass("is-visible");
     }
-
 });
