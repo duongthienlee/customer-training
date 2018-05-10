@@ -69,7 +69,7 @@ class AddTraining extends Component {
                     </form>
                 </SkyLight>
                 <button
-                    className="btn btn-outline-primary btn-sm"
+                    className="App-btn-sm"
                     style={{ margin: 10 }}
                     onClick={() => this.simpleDialog.show()}
                 >

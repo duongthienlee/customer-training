@@ -182,7 +182,7 @@ class DisplayCustomerTraining extends Component {
                                     accessor: "links.self.href",
                                     Cell: ({ value, row }) => (
                                         <button
-                                            className="btn btn-outline-success btn-sm"
+                                            className="App-btn-sm"
                                             onClick={() => {
                                                 this.EditTraining(row, value);
                                             }}
@@ -199,7 +199,7 @@ class DisplayCustomerTraining extends Component {
                                     width: 100,
                                     Cell: ({ value }) => (
                                         <button
-                                            className="btn btn-outline-warning btn-sm"
+                                            className="App-btn-sm warning"
                                             onClick={() => {
                                                 this.deleteTraining(value);
                                             }}
@@ -212,6 +212,7 @@ class DisplayCustomerTraining extends Component {
                         }
                     ]}
                     filterable
+                    minRows={0}
                     defaultPageSize={2}
                     className="-striped -highlight "
                 />

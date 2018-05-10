@@ -9,10 +9,12 @@
 
 .container {
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .App-title {
   font-size: 1.5em;
+  margin-top: 100px;
 }
 
 .App-intro {
@@ -60,6 +62,30 @@
 }
 
 .App-btn:active {
+  color: #fff;
+  background-color: #01303f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.App-btn-sm {
+  padding: 6px 12px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #014960;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.App-btn-sm:hover {
+  background-color: #01303f;
+  color: #fff;
+}
+
+.App-btn-sm:active {
   color: #fff;
   background-color: #01303f;
   box-shadow: 0 5px #666;
